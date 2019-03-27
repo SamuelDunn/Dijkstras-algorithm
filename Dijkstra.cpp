@@ -1,4 +1,7 @@
-// Djikstra's Algorithm
+/*
+ Declaration for the dijkstra() function and for a custom exception class.
+ See Dijkstra.hpp for more information. 
+*/
 
 #include "Dijkstra.hpp"
 #include <iostream>
@@ -10,8 +13,12 @@
 
 void dijkstra(Graph graph, int startNode, int endNode) {
 
-   // Check that startNode and endNode are in the correct range.
-   // throw an error otherwise.
+   if(startNode < 0 || startNode > graph.size() - 1) {
+      throw DijkstraException("source node is not in range");
+   } else if (endNode < 0 || endNode > graph.size() - 1) {
+      throw DijkstraException("target node is not in range");
+   }
+   
 
    std::vector<bool> visited;
    std::vector<int> prevNode;
@@ -34,7 +41,6 @@ void dijkstra(Graph graph, int startNode, int endNode) {
    numVisited ++;
    prevNode[currentNode] = currentNode; // This can be a check for us when we're
    // retracing our steps to get the path.
-
 
    while(numVisited < graph.adjList.size()) {
 
@@ -125,6 +131,21 @@ void dijkstra(Graph graph, int startNode, int endNode) {
    }
 
 }
+
+
+
+
+DijkstraException::DijkstraException(std::string message) {
+   this->message = message;
+}
+
+
+
+
+std::string DijkstraException::getMessage() {
+   return message;
+}
+
 
 
 

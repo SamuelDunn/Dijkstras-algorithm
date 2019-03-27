@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
    // 6006 nodes (labeled from 0 to 6005)
    graph = Graph(6006, "input/soc-sign-bitcoinotc-clean.txt");
    dijkstra(graph, 1023, 3);
-
+   
 
    // 7605 nodes (labeled from 0 to 7604)
    graph = Graph(7605, "input/soc-sign-bitcoinalpha-clean.txt");

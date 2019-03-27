@@ -1,3 +1,8 @@
+/*
+This file contains the declarations for the helper functions used to help
+ with the implementation of Dijkstra's algorithm. 
+ */
+
 
 #include "Helpers.hpp"
 #include <sstream>

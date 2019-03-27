@@ -1,13 +1,11 @@
+/*
+This file contains the function declarations for the MinHeap class. See
+MinHeap.hpp for more information
+ */
+
 
 #include "MinHeap.hpp"
 #include <iostream>
-
-
-
-
-//MinHeap::MinHeap(int* array, int size) {
-//   heapBuild(array, size);
-//}
 
 
 
@@ -103,18 +101,6 @@ void MinHeap::percolateDown(int index) {
 
 
 
-//void MinHeap::heapBuild(int* array, int size) {
-//   for(int i = 0; i < size; i ++) {
-//      nodes.push_back(array[i]);
-//   }
-//   for(int i = (size - 2)/2; i >= 0; i --) {
-//      percolateDown(i);
-//   }
-//}
-
-
-
-
 void MinHeap::insert(int key, int value) {
    nodes.push_back(Node(key, value));
    percolateUp(static_cast<int>(nodes.size()) - 1);
@@ -137,22 +123,6 @@ MinHeap::Node MinHeap::deleteMin() {
 
 
 
-//void MinHeap::increaseKey(int index, int amount) {
-//   if(index < 0 || index > nodes.size()) {
-//      return;
-//   }
-//   nodes[index] += amount;
-//   percolateDown(index);
-//}
-
-
-
-
-// For the purposes of Dijkstra's algorithm this founction is not implemented
-// as it usually would. We'll instead simply create a node with the same value
-// as the node that already exists and needs its value updated with the new
-// key value. It's up to the user to detect the duplicates and deal with them
-// accordingly.
 void MinHeap::decreaseKey(int key, int value) {
    nodes.push_back(Node(key, value));
    percolateUp(static_cast<int>(nodes.size()) - 1);
