@@ -1,5 +1,5 @@
 /*
- This is the client program used to the dijkstra() function which implements
+ This is the client program used to test the dijkstra() function which implements
  Dijkstra's shortest path algorithm.
  The function has the following signature:
 
@@ -7,12 +7,13 @@
 
  The second and third parameters (startNode and endNode) indicate the source
  and target vertices. Each of these values must be in the correct
- range which is [0, |V|] where |V| is the size of the vertex set and is proveded
- below in main().
- The first argument must be a Graph struct (see Graph.hpp for more information).
+ range which is [0, |V|] where |V| is the size of the vertex set. The value of
+ |V| for each of the test graphs is proveded below in main().
+ The first argument of the function must be a Graph struct (see Graph.hpp for
+ more information).
 
  To test the algorithm in different situations provide the dijkstra() function
- different source and target vertices and run to see the results. 
+ different source and target vertices and run the program to see the results.
  */
 
 #include <iostream>
