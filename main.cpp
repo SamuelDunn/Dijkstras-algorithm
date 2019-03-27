@@ -7,7 +7,7 @@
 
  The second and third parameters (startNode and endNode) indicate the source
  and target vertices. Each of these values must be in the correct
- range which is [0, |V|] where |V| is the size of the vertex set. The value of
+ range which is [0, |V| - 1] where |V| is the size of the vertex set. The value of
  |V| for each of the test graphs is proveded below in main().
  The first argument of the function must be a Graph struct (see Graph.hpp for
  more information).
