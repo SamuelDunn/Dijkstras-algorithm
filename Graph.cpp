@@ -1,11 +1,14 @@
+/*
+ Declarations for the member functions of the Graph struct. See Graph.hpp for
+ more information
+ */
 
 #include "Graph.hpp"
 #include <iostream>
 #include "Helpers.hpp"
 
 
-// vertices will give the number of vertices in the graph and we'll start the
-// numbering, or "naming", at zero.
+
 
 Graph::Graph(int vertices, std::string fileName) {
 
@@ -45,6 +48,7 @@ void Graph::print() {
    }
 
 }
+
 
 
 

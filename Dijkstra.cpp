@@ -9,9 +9,6 @@
 #include <tuple>
 
 void dijkstra(Graph graph, int startNode, int endNode) {
-   // Do the entire algorithm and then find the path from start to end that way
-   // it will be easier to give other paths in the furure as an added
-   // feature.
 
    // Check that startNode and endNode are in the correct range.
    // throw an error otherwise.
@@ -77,9 +74,10 @@ void dijkstra(Graph graph, int startNode, int endNode) {
 
    } // end while
 
-
-   // Report shortest paths from startNode to all nodes. Not needed. Only report
-   // for the end node (done below)
+   // Report shortest paths from startNode to all nodes in the graph. For large
+   // graphs reporting all shortest paths clutters the output. Instead of
+   // reporting all paths the code below this comment reports only the shortest
+   // path from startNode to endNode
 //   for(int i = 0; i < graph.adjList.size(); i ++) {
 //      if(visited[i]) {
 //         std::cout << "The shortest path from " << startNode << " to " << i
@@ -104,7 +102,7 @@ void dijkstra(Graph graph, int startNode, int endNode) {
 //      }
 //   }
 
-   // Report the shortest path.
+   // Report the shortest path from startNode to endNode
    if(visited[endNode]) {
       std::cout << "The shortest path from " << startNode << " to " << endNode
       << " is ";
@@ -129,28 +127,4 @@ void dijkstra(Graph graph, int startNode, int endNode) {
 }
 
 
-
-
-
-
-
-
-
-
-/*
-
- visited, distance, previous (what node did we come from)
- Information for distance will be kept in the minheap
---------------------------------------------
-|  Vertices  |  Visited  |  Previous Node  |
-|                                          |
-|                                          |
-|                                          |
-|                                          |
-|                                          |
-|                                          |
-|                                          |
-|                                          |
---------------------------------------------
-*/
 
