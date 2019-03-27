@@ -1,3 +1,20 @@
+/*
+ This is the client program used to the dijkstra() function which implements
+ Dijkstra's shortest path algorithm.
+ The function has the following signature:
+
+ void dijkstra(Graph graph, int startNode, int endNode);
+
+ The second and third parameters (startNode and endNode) indicate the source
+ and target vertices. Each of these values must be in the correct
+ range which is [0, |V|] where |V| is the size of the vertex set and is proveded
+ below in main().
+ The first argument must be a Graph struct (see Graph.hpp for more information).
+
+ To test the algorithm in different situations provide the dijkstra() function
+ different source and target vertices and run to see the results. 
+ */
+
 #include <iostream>
 #include <tuple>
 #include <vector>
@@ -34,91 +51,3 @@ int main(int argc, char* argv[])
 }
 
 
-
-//   cout << endl << endl << endl;
-//
-//
-//   MinHeap myHeap = MinHeap();
-//   myHeap.insert(3, 5);
-//   myHeap.insert(2, 109);
-//   myHeap.insert(12, 4);
-//   myHeap.insert(1, 6);
-//   myHeap.insert(3, 6);
-//   myHeap.insert(8, 6);
-
-//   myHeap.print();
-
-
-
-
-//   srand(static_cast<int>(time(0)));
-//   priority_queue<int,vector<int>,greater<int> > q;
-//   for( int i = 0; i != 10; ++i ) q.push(rand()%10);
-//   cout << "Min-heap, popped one by one: ";
-//   while( ! q.empty() ) {
-//      cout << q.top() << ' ';
-//      q.pop();
-//   }
-//   cout << endl;
-//
-//   // Testhing list:
-//   list<int> myList = list<int>();
-//   myList.push_front(3);
-//   myList.push_front(4);
-//   myList.push_front(43);
-//
-//   list<int>::iterator it;
-//   for(it = myList.begin(); it != myList.end(); it++ ){
-//      cout << *it << endl;
-//   }
-//
-//   tuple<int, int, int> myTup = tuple<int, int, int>(1, 3, 444);
-//   cout << get<2>(myTup) << endl;
-//
-//
-//
-//   vector<int> myVec = vector<int>();
-//   myVec.reserve(10);
-//   myVec[9] = 234;
-//   cout << myVec[9] << endl;
-//   cout << myVec.capacity() << endl;
-//
-//   std::vector<std::tuple<int ,int>>::iterator it;
-//
-//   for(it = edges.begin(); it != edges.end(); it ++) {
-//      cout << std::get<0>(*it) << ", " << std::get<1>(*it) << endl;
-//   }
-
-
-// Test graph
-//   edges.push_back(tuple<int, int, int>(0, 1, 2));
-//   edges.push_back(tuple<int, int, int>(0, 2, 10));
-//   edges.push_back(tuple<int, int, int>(0, 3, 4));
-//   edges.push_back(tuple<int, int, int>(1, 2, 12));
-//   edges.push_back(tuple<int, int, int>(2, 1, 9));
-//   edges.push_back(tuple<int, int, int>(3, 0, 7));
-//   edges.push_back(tuple<int, int, int>(3, 2, 1));
-
-
-
-// Test graph number 2 //////
-//vector<tuple<int, int, int>> edges = vector<tuple<int, int, int>>();
-//
-//edges.push_back(tuple<int, int, int>(0, 1, 2));
-//edges.push_back(tuple<int, int, int>(0, 3, 1));
-//edges.push_back(tuple<int, int, int>(1, 3, 3));
-//edges.push_back(tuple<int, int, int>(1, 4, 10));
-//edges.push_back(tuple<int, int, int>(2, 0, 4));
-//edges.push_back(tuple<int, int, int>(2, 5, 5));
-//edges.push_back(tuple<int, int, int>(3, 2, 2));
-//edges.push_back(tuple<int, int, int>(3, 4, 2));
-//edges.push_back(tuple<int, int, int>(3, 5, 8));
-//edges.push_back(tuple<int, int, int>(3, 6, 4));
-//edges.push_back(tuple<int, int, int>(4, 6, 6));
-//edges.push_back(tuple<int, int, int>(6, 5, 1));
-//
-//
-//Graph myGraph = Graph(7, edges);
-////myGraph.print();
-//
-//dijkstra(myGraph, 4, 3);
